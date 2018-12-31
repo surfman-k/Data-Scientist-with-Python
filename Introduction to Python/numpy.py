@@ -16,10 +16,6 @@ np_baseball = np.array(baseball)
 print(type(np_baseball))
 
 
-# height is available as a regular list
-# Import numpy
-import numpy as np
-
 # Create a numpy array from height: np_height_in
 np_height_in = np.array(height_in)
 
@@ -33,10 +29,6 @@ np_height_m = np_height_in * 0.0254
 print(np_height_m)
 
 
-# height and weight are available as regular lists
-# Import numpy
-import numpy as np
-
 # Create array from height_in with metric units: np_height_m
 np_height_m = np.array(height_in) * 0.0254
 
@@ -49,10 +41,6 @@ bmi = np_weight_kg / np_height_m ** 2
 # Print out bmi
 print(bmi)
 
-
-# height and weight are available as a regular lists
-# Import numpy
-import numpy as np
 
 # Calculate the BMI: bmi
 np_height_m = np.array(height_in) * 0.0254
@@ -68,3 +56,13 @@ print(light)
 # Print out BMIs of all baseball players whose BMI is below 21
 print(bmi[light])
 
+
+# Store weight and height lists as numpy arrays
+np_weight_lb = np.array(weight_lb)
+np_height_in = np.array(height_in)
+
+# Print out the weight at index 50
+print(np_weight_lb[50])
+
+# Print out sub-array of np_height: index 100 up to and including index 110
+print(np_height_in[100:111])
