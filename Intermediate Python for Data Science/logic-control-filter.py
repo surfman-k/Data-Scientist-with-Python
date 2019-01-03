@@ -110,4 +110,8 @@ elif area > 10:
     print('medium size, nice!')
 else :
     print("pretty small.")
-    
+
+
+###############################
+
+# Filtering Pandas DataFrames
