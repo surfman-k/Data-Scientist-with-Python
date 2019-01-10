@@ -1,4 +1,6 @@
-# Loops
+###########
+## Loops ##
+###########
 
 # Initialize offset
 offset = 8
@@ -22,7 +24,9 @@ while offset != 0 :
     print(offset)
 
 
-##### For Loops
+###############
+## For Loops ##
+###############
 
 # areas list
 areas = [11.25, 18.0, 20.0, 10.75, 9.50]
@@ -50,7 +54,9 @@ for list in house:
     print('the ' + str(list[0]) + ' is ' + str(list[1]) + ' sqm')
 
 
-# Looping Data Structures
+#############################
+## Looping Data Structures ##
+#############################
 
 # Definition of dictionary
 europe = {'spain':'madrid', 'france':'paris', 'germany':'berlin',
@@ -69,7 +75,9 @@ for x in np.nditer(np_baseball):
     print(x)
 
 
-# Looping over Pandas
+#########################
+## Looping Over Pandas ##
+#########################
 
 # Import cars data
 import pandas as pd

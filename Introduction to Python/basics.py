@@ -1,4 +1,6 @@
-# Basics
+############
+## Basics ##
+############
 
 # Python created by Guido Van Rossum
 # General Purpose language

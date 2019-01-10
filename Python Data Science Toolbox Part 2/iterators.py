@@ -1,6 +1,6 @@
-# Using Iterators in Python
-
-
+###############################
+## Using Iterators in Python ##
+###############################
 
 # Create a list of strings: flash
 flash = ['jay garrick', 'barry allen', 'wally west', 'bart allen']
@@ -18,7 +18,6 @@ print(next(superspeed))
 print(next(superspeed))
 print(next(superspeed))
 print(next(superspeed))
-
 
 
 
@@ -128,8 +127,10 @@ print(result2 == powers)
 
 
 
+###########################
+## Large amounts of data ##
+###########################
 
-# Large amounts of data
 # Sometimes data is too large to be loaded in one shot, we would use iterators to load in chunks
 
 # Initialize an empty dictionary: counts_dict

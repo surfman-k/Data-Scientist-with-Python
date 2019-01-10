@@ -1,4 +1,6 @@
-# Logic, Control Flow, and Filtering
+########################################
+## Logic, Control Flow, and Filtering ##
+########################################
 
 # Comparison Operators
 
@@ -35,8 +37,9 @@ print(my_house >= 18)
 # my_house less than your_house
 print(my_house < your_house)
 
-
-# Boolean Operators
+#######################
+## Boolean Operators ##
+#######################
 
 # Define variables
 my_kitchen = 18.0
@@ -60,8 +63,9 @@ print(np.logical_or(my_house > 18.5, my_house < 10))
 # Both my_house and your_house smaller than 11
 print(np.logical_and(my_house < 11, your_house < 11))
 
-
-# if, else, elif
+####################
+## if, else, elif ##
+####################
 
 # Define variables
 room = "kit"
@@ -112,9 +116,9 @@ else :
     print("pretty small.")
 
 
-###############################
-
-# Filtering Pandas DataFrames
+#################################
+## Filtering Pandas DataFrames ##
+#################################
 
 # Import cars data
 import pandas as pd

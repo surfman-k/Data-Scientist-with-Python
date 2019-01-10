@@ -1,4 +1,6 @@
-# Scope and User-Defined Functions
+######################################
+## Scope and User-Defined Functions ##
+######################################
 
 # Scopes: 
 #   Global - defined in the main body of the script
@@ -27,9 +29,9 @@ change_team()
 print(team)
 
 
-
-# Nested Functions
-
+######################
+## Nested Functions ##
+######################
 
 # Define three_shouts
 def three_shouts(word1, word2, word3):
@@ -102,7 +104,9 @@ def echo_shout(word):
 echo_shout('hello')
 
 
-# Default and Flexible Arguments
+####################################
+## Default and Flexible Arguments ##
+####################################
 
 # Define shout_echo
 def shout_echo(word1, echo=1):

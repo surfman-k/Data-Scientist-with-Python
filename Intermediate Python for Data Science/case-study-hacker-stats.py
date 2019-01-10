@@ -77,8 +77,10 @@ plt.plot(random_walk)
 plt.show()
 
 
+###############################
+## Visualizing multiple runs ##
+###############################
 
-# Visualizing multiple runs
 
 # initialize and populate all_walks
 all_walks = []

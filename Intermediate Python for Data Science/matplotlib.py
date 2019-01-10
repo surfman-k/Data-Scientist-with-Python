@@ -1,4 +1,6 @@
-# Matplotlib
+################
+## Matplotlib ##
+################
 
 # Print the last item from year and pop
 print(year[-1], pop[-1])
@@ -30,8 +32,9 @@ plt.xscale('log')
 # Show plot
 plt.show()
 
-
-# Histograms 
+################
+## Histograms ##
+################
 
 # Create histogram of life_exp data
 plt.hist(life_exp)

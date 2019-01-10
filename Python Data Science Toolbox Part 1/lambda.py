@@ -1,6 +1,6 @@
-# Lambda Functions
-
-
+######################
+## Lambda Functions ##
+######################
 
 # Define echo_word as a lambda function: echo_word
 echo_word = (lambda word1, echo: word1 * echo)
@@ -56,8 +56,9 @@ print(result)
 
 
 
-
-# EEROR HANDLING!!!
+####################
+## ERROR HANDLING ##
+####################
 
 # Define shout_echo
 def shout_echo(word1, echo=1):
@@ -107,9 +108,9 @@ shout_echo("particle", echo=5)
 
 
 
-###########################################
-# Lambdas and Error messages in DataFrames
-
+##############################################
+## Lambdas and Error messages in DataFrames ##
+##############################################
 
 # Select retweets from the Twitter DataFrame: result
 result = filter(lambda x: x[0:2] == 'RT', tweets_df['text'])

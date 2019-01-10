@@ -1,4 +1,6 @@
-# Building Pythong Functions
+################################
+## Building Pythong Functions ##
+#################################
 
 # No Parameters
 # Define the function shout
@@ -68,7 +70,9 @@ yell = shout4('congratulations', 'you')
 print(yell)
 
 
-# Tuples
+############
+## Tuples ##
+############
 
 nums = (3,4,6)
 # Unpack nums into num1, num2, and num3
@@ -101,7 +105,9 @@ print(yell1)
 print(yell2)
 
 
-# Bringing it all together
+##############################
+## Bringing it all together ##
+##############################
 
 # Import pandas
 import pandas as pd
@@ -130,8 +136,9 @@ print(langs_count)
 
 
 
-
-# Alternate Solution
+########################
+## Alternate Solution ##
+########################
 
 # Define count_entries()
 def count_entries(df, col_name):

@@ -1,4 +1,6 @@
-# Dictionaries & Pandas
+########################### 
+## Dictionaries & Pandas ##
+###########################
 
 # Definition of countries and capital
 countries = ['spain', 'france', 'germany', 'norway']
@@ -67,9 +69,9 @@ europe['italy']=data
 # Print europe
 print(europe)
 
-##########################################################
-
-# Pandas
+############
+## Pandas ##
+############
 
 # Pre-defined lists
 names = ['United States', 'Australia', 'Japan', 'India', 'Russia', 'Morocco', 'Egypt']

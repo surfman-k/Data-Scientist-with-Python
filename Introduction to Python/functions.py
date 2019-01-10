@@ -28,7 +28,9 @@ print(full_sorted)
 
 ##################################################
 
-# Methods
+#############
+## Methods ##
+#############
 
 # string to experiment with: place
 place = "poolhouse"
@@ -69,7 +71,10 @@ print(areas)
 
 ##################################################
 
-# Packages
+##############
+## Packages ##
+##############
+
 
 # Numpy to efficiently work with arrays
 # Matplotlib for data visualization

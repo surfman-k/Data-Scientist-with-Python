@@ -1,4 +1,6 @@
-# NumPy
+##############
+## Numpy ##
+##############
 
 # Numeric Python
 # Provides an alternative to Python lists: The NumPy Array
@@ -68,7 +70,10 @@ print(np_weight_lb[50])
 print(np_height_in[100:111])
 
 
-# 2D NumPy Arrays
+
+#####################
+## 2D NumPy Arrays ##
+#####################
 
 # Create baseball, a list of lists
 baseball = [[180, 78.4],
@@ -99,6 +104,7 @@ np_weight_lb = np_baseball[:,1]
 print(np_baseball[123,0])
 
 
+
 # Create np_baseball (3 cols)
 np_baseball = np.array(baseball)
 
@@ -112,6 +118,7 @@ conversion = np.array([0.0254, 0.453592, 1])
 print(np_baseball * conversion)
 
 
+
 # Create np_height_in from np_baseball
 np_height_in = np_baseball[:,0]
 
@@ -120,6 +127,7 @@ print(np.mean(np_height_in))
 
 # Print out the median of np_height_in
 print(np.median(np_height_in))
+
 
 
 # Print mean height (first column)
