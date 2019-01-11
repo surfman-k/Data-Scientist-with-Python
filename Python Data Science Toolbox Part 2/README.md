@@ -12,9 +12,9 @@
 ## Case Study
 
 Scenario :  
-Data on 217 world economies for 1960-2015
-Indicators such as: Population, Electricity consumption, CO2 emissions, Literacy rates, Unemployment, Mortality Rates
-Viewing the Urban Population in various countries from 1960 to 2015.
+Data on 217 world economies for 1960-2015  
+Indicators such as: Population, Electricity consumption, CO2 emissions, Literacy rates, Unemployment, Mortality Rates  
+Viewing the move urbanization in countries from 1960 to 2015.
 
 ## Visualizations 
 
