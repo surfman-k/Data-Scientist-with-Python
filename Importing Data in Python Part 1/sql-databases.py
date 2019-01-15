@@ -82,3 +82,39 @@ with engine.connect() as con:
 # Print head of DataFrame
 print(df.head())
 
+
+#######################################
+## Pandas Way to Query SQL Databases ##
+#######################################
+
+# Import packages
+from sqlalchemy import create_engine
+import pandas as pd
+
+# Create engine: engine
+engine = create_engine('sqlite:///Chinook.sqlite')
+
+# Execute query and store records in DataFrame: df
+df = pd.read_sql_query('SELECT * FROM Album', engine)
+
+# Print head of DataFrame
+print(df.head())
+
+# Open engine in context manager and store query result in df1
+with engine.connect() as con:
+    rs = con.execute("SELECT * FROM Album")
+    df1 = pd.DataFrame(rs.fetchall())
+    df1.columns = rs.keys()
+
+# Import packages
+from sqlalchemy import create_engine
+import pandas as pd
+
+# Create engine: engine
+engine = create_engine('sqlite:///Chinook.sqlite')
+
+# Execute query and store records in DataFrame: df
+df = pd.read_sql_query('SELECT * FROM Employee WHERE EmployeeId >= 6 ORDER BY BirthDate', engine)
+
+# Print head of DataFrame
+print(df.head())
