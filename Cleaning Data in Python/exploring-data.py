@@ -40,3 +40,27 @@ print(df.columns)
 # Print the head and tail of df_subset
 print(df_subset.head())
 print(df_subset.tail())
+
+# Print the info of df
+print(df.info())
+
+# Print the info of df_subset
+print(df_subset.info())
+
+
+
+#######################
+## Describe the Data ##
+#######################
+
+# For numerical data
+print(df.describe())
+
+# Print the value counts for 'Borough'
+print(df['Borough'].value_counts(dropna=False))
+
+# Print the value_counts for 'State'
+print(df['State'].value_counts(dropna=False))
+
+# Print the value counts for 'Site Fill'
+print(df['Site Fill'].value_counts(dropna=False))
