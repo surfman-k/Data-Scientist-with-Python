@@ -1,4 +1,5 @@
 # Data Scientist with Python
+Following Data Camp's data science with Python path.
 
 ## Interesting Content
 
