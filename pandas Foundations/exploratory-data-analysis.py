@@ -2,7 +2,6 @@
 ## Visual exploratory data analysis ##
 ######################################
 
-
 ### Line plot
 
 # Create a list of y-axis column names: y_columns
@@ -19,7 +18,6 @@ plt.ylabel('Price ($US)')
 
 # Display the plot
 plt.show()
-
 
 
 ### Scatter Plot
@@ -40,7 +38,6 @@ plt.ylabel('Fuel efficiency (mpg)')
 plt.show()
 
 
-
 ### Box Plots
 
 # Make a list of the column names to be plotted: cols
@@ -51,8 +48,6 @@ df[cols].plot(kind='box', subplots=True)
 
 # Display the plot
 plt.show()
-
-
 
 
 ### Histograms
@@ -67,8 +62,6 @@ plt.show()
 # Plot the CDF
 df.fraction.plot(ax=axes[0], kind='hist', bins=30, cumulative=True, normed=True, range=(0,.3))
 plt.show()
-
-
 
 ###########################################
 ## Statistical exploratory data analysis ##
@@ -90,8 +83,6 @@ mean.plot()
 plt.show()
 
 
-
-
 # Print summary statistics of the fare column with .describe()
 print(df['fare'].describe())
 
@@ -100,9 +91,6 @@ df.fare.plot(kind='box')
 
 # Show the plot
 plt.show()
-
-
-
 
 
 # Print the number of countries reported in 2015
@@ -115,7 +103,6 @@ print(df.quantile([0.05, 0.95]))
 years = ['1800','1850','1900','1950','2000']
 df[years].plot(kind='box')
 plt.show()
-
 
 
 # Print the mean of the January and March data
