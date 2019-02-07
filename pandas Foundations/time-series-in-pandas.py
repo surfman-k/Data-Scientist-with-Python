@@ -36,3 +36,9 @@ sum13 = ts1 + ts3
 
 # Combine ts1 + ts4: sum14
 sum14 = ts1 + ts4
+
+
+############################
+## Resampling time series ##
+############################
+
