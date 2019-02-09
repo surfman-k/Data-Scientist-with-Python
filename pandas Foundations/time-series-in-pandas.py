@@ -85,3 +85,7 @@ daily_highs = august.resample('D').max()
 # Use a rolling 7-day window with method chaining to smooth the daily high temperatures in August
 daily_highs_smoothed = daily_highs.rolling(window=7).mean()
 print(daily_highs_smoothed)
+
+##############################
+## Manipulating time series ##
+##############################
