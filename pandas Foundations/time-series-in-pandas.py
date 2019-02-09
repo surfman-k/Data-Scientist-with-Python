@@ -128,3 +128,8 @@ times_tz_central = times_tz_none.dt.tz_localize('US/Central')
 
 # Convert the datetimes from US/Central to US/Pacific
 times_tz_pacific = times_tz_central.dt.tz_convert('US/Pacific')
+
+
+################################
+## Time Series Visualizations ##
+################################
