@@ -84,3 +84,7 @@ print(df_clean.loc['2011-Apr':'2011-Jun', 'dry_bulb_faren'].median())
 print(df_clean.loc['2011-Jan', 'dry_bulb_faren'].median())
 
 ### Signal Variance
+
+
+
+### Visual Exploratory Data Analysis
