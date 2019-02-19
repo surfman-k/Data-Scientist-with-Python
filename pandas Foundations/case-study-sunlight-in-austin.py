@@ -128,3 +128,13 @@ overcast_daily_max = overcast.resample('D').max()
 
 # See the result
 overcast_daily_max.head()
+
+
+# Calculate the mean of sunny_daily_max
+sunny_daily_max_mean = sunny_daily_max.mean()
+
+# Calculate the mean of overcast_daily_max
+overcast_daily_max_mean = overcast_daily_max.mean()
+
+# Print the difference (sunny minus overcast)
+print(sunny_daily_max_mean - overcast_daily_max_mean)
