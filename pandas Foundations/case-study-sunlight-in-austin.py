@@ -115,3 +115,16 @@ sunny_daily_max = sunny.resample('D').max()
 
 # See the result
 sunny_daily_max.head()
+
+
+# Using df_clean, when does sky_condition contain 'OVC'?
+is_sky_overcast = df_clean['sky_condition'].str.contains('OVC')
+
+# Filter df_clean using is_sky_overcast
+overcast = df_clean.loc[is_sky_overcast]
+
+# Resample overcast by day then calculate the max
+overcast_daily_max = overcast.resample('D').max()
+
+# See the result
+overcast_daily_max.head()
