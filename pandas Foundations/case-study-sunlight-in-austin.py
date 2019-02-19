@@ -100,3 +100,18 @@ daily_temp_climate = daily_climate.reset_index()['Temperature']
 # Compute the difference between the two arrays and print the mean difference
 difference = daily_temp_2011 - daily_temp_climate
 print(difference.mean())
+
+
+### Sunny or Cloudy
+
+# Using df_clean, when is sky_condition 'CLR'?
+is_sky_clear = df_clean['sky_condition']=='CLR'
+
+# Filter df_clean using is_sky_clear
+sunny = df_clean.loc[is_sky_clear]
+
+# Resample sunny by day then calculate the max
+sunny_daily_max = sunny.resample('D').max()
+
+# See the result
+sunny_daily_max.head()
