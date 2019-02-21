@@ -154,3 +154,14 @@ print(weekly_mean.corr())
 # Plot weekly_mean with subplots=True
 weekly_mean.plot(subplots=True)
 plt.show()
+
+
+
+# Using df_clean, when is sky_condition 'CLR'?
+is_sky_clear = df_clean['sky_condition'] == 'CLR'
+
+# Resample is_sky_clear by day
+resampled = df_clean.loc[is_sky_clear]
+
+# See the result
+resampled
