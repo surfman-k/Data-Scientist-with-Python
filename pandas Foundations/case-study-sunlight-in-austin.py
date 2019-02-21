@@ -156,12 +156,13 @@ weekly_mean.plot(subplots=True)
 plt.show()
 
 
+### Clear skies
 
 # Using df_clean, when is sky_condition 'CLR'?
 is_sky_clear = df_clean['sky_condition'] == 'CLR'
 
 # Resample is_sky_clear by day
-resampled = df_clean.loc[is_sky_clear]
+resampled = is_sky_clear.resample('D')
 
 # See the result
 resampled
