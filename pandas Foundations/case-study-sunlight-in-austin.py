@@ -166,3 +166,19 @@ resampled = is_sky_clear.resample('D')
 
 # See the result
 resampled
+
+
+### Sunny hours
+
+# From previous step
+is_sky_clear = df_clean['sky_condition'] == 'CLR'
+resampled = is_sky_clear.resample('D')
+
+# Calculate the number of sunny hours per day
+sunny_hours = resampled.sum()
+
+# Calculate the number of measured hours per day
+total_hours = resampled.count()
+
+# Calculate the fraction of hours per day that were sunny
+sunny_fraction = sunny_hours/total_hours
