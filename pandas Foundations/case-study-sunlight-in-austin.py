@@ -182,3 +182,17 @@ total_hours = resampled.count()
 
 # Calculate the fraction of hours per day that were sunny
 sunny_fraction = sunny_hours/total_hours
+
+
+### plotting sunny hours
+
+# From previous steps
+is_sky_clear = df_clean['sky_condition'] == 'CLR'
+resampled = is_sky_clear.resample('D')
+sunny_hours = resampled.sum()
+total_hours = resampled.count()
+sunny_fraction = sunny_hours / total_hours
+
+# Make a box plot of sunny_fraction
+sunny_fraction.plot(kind='box')
+plt.show()
