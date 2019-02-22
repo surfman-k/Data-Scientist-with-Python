@@ -13,3 +13,7 @@ results = election[['winner', 'total', 'voters']]
 
 # Print the output of results.head()
 print(results.head())
+
+########################
+## Slicing DataFrames ##
+########################
