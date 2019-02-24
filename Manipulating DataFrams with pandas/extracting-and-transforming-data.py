@@ -18,6 +18,8 @@ print(results.head())
 ## Slicing DataFrames ##
 ########################
 
+### Slicing Rows
+
 # Slice the row labels 'Perry' to 'Potter': p_counties
 p_counties = election['Perry':'Potter']
 
