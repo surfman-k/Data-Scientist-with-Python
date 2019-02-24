@@ -53,6 +53,9 @@ right_columns = election.loc[:,'Romney':]
 # Print the output of right_columns.head()
 print(right_columns.head())
 
+
+
+
  # Create the list of row labels: rows
 rows = ['Philadelphia', 'Centre', 'Fulton']
 
@@ -64,3 +67,15 @@ three_counties = election.loc[rows, cols]
 
 # Print the three_counties DataFrame
 print(three_counties)
+
+
+### Filtering DataFrames
+
+# Create the boolean array: high_turnout
+high_turnout = election.turnout > 70
+
+# Filter the election DataFrame with the high_turnout array: high_turnout_df
+high_turnout_df = election[high_turnout]
+
+# Print the high_turnout_results DataFrame
+print(high_turnout_df)
