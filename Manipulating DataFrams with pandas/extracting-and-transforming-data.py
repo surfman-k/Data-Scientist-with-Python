@@ -110,7 +110,3 @@ print(df.dropna(how='all').shape)
 
 # Drop columns in titanic with less than 1000 non-missing values
 print(titanic.dropna(thresh=1000, axis='columns').info())
-
-
-
-### Transforming DataFrames
