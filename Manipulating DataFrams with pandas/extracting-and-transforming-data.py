@@ -114,6 +114,8 @@ print(titanic.dropna(thresh=1000, axis='columns').info())
 
 ### Transforming DataFrames
 
+# Using apply()
+
 # Write a function to convert degrees Fahrenheit to degrees Celsius: to_celsius
 def to_celsius(F):
     return 5/9*(F - 32)
@@ -126,3 +128,15 @@ df_celsius.columns = ['Mean TemperatureC', 'Mean Dew PointC']
 
 # Print the output of df_celsius.head()
 print(df_celsius.head())
+
+
+# Using map()
+
+# Create the dictionary: red_vs_blue
+red_vs_blue = {'Obama':'blue', 'Romney':'red'}
+
+# Use the dictionary to map the 'winner' column to the new column: election['color']
+election['color'] = election.winner.map(red_vs_blue)
+
+# Print the output of election.head()
+print(election.head())
