@@ -63,3 +63,15 @@ print(sales['CA':'TX'])
     #       2        77  87.0    20
     # TX    1       132   NaN    52
     #       2       205  60.0    55
+
+
+## Sorting the MultiIndex
+
+# Set the index to be the columns ['state', 'month']: sales
+sales = sales.set_index(['state', 'month'])
+
+# Sort the MultiIndex: sales
+sales = sales.sort_index()
+
+# Print the sales DataFrame
+print(sales)
