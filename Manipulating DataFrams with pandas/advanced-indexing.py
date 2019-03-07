@@ -99,3 +99,14 @@ CA_TX_month2 = sales.loc[(['CA', 'TX'], 2), :]
 
 # Look up data for all states in month 2: all_month2
 all_month2 = sales.loc[(slice(None), 2), :]
+
+
+#########################
+## Pivoting DataFrames ##
+#########################
+
+# Pivot the users DataFrame: visitors_pivot
+visitors_pivot = users.pivot(index='weekday', columns='city', values='visitors')
+
+# Print the pivoted DataFrame
+print(visitors_pivot)
