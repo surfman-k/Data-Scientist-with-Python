@@ -66,3 +66,8 @@ print(newusers)
 
 # Verify that the new DataFrame is equal to the original
 print(newusers.equals(users))
+
+
+########################
+## Melting DataFrames ##
+########################
