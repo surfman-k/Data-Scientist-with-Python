@@ -105,3 +105,8 @@ kv_pairs = pd.melt(users_idx, col_level=0)
 
 # Print the key-value pairs
 print(kv_pairs)
+
+
+##################
+## Pivot Tables ##
+##################
