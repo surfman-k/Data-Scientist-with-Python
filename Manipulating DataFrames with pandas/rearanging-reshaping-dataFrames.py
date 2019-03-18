@@ -117,3 +117,7 @@ by_city_day = users.pivot_table(index='weekday', columns='city')
 # Print by_city_day
 print(by_city_day)
 
+
+#######################
+## More Pivot Tables ##
+#######################
