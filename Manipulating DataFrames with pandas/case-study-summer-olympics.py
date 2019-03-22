@@ -33,3 +33,40 @@ counted = counted.sort_values('totals', ascending=False)
 
 # Print the top 15 rows of counted
 print(counted.head(15))
+
+
+
+### Viewing and Understanding the data's columns
+
+# Select columns: ev_gen
+ev_gen = medals[['Event_gender', 'Gender']]
+
+# Drop duplicate pairs: ev_gen_uniques
+ev_gen_uniques = ev_gen.drop_duplicates()
+
+# Print ev_gen_uniques
+print(ev_gen_uniques)
+
+
+### Looking for possible errors using Groupby
+
+# Group medals by the two columns: medals_by_gender
+medals_by_gender = medals.groupby(['Event_gender','Gender'])
+
+# Create a DataFrame with a group count: medal_count_by_gender
+medal_count_by_gender = medals_by_gender.count()
+
+# Print medal_count_by_gender
+print(medal_count_by_gender)
+
+
+### Isolating the suspicious record
+
+# Create the Boolean Series: sus
+sus = (medals.Event_gender == 'W') & (medals.Gender == 'Men')
+
+# Create a DataFrame with the suspicious row: suspect
+suspect = pd.DataFrame(medals[sus])
+
+# Print suspect
+print(suspect)
