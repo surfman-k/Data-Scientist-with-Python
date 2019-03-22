@@ -47,7 +47,6 @@ ev_gen_uniques = ev_gen.drop_duplicates()
 # Print ev_gen_uniques
 print(ev_gen_uniques)
 
-
 ### Looking for possible errors using Groupby
 
 # Group medals by the two columns: medals_by_gender
@@ -59,7 +58,6 @@ medal_count_by_gender = medals_by_gender.count()
 # Print medal_count_by_gender
 print(medal_count_by_gender)
 
-
 ### Isolating the suspicious record
 
 # Create the Boolean Series: sus
@@ -70,3 +68,20 @@ suspect = pd.DataFrame(medals[sus])
 
 # Print suspect
 print(suspect)
+
+
+
+### Finding which countries won medals in the most distinct sports
+
+# Group medals by 'NOC': country_grouped
+country_grouped = medals.groupby('NOC')
+
+# Compute the number of distinct sports in which each country won medals: Nsports
+Nsports = country_grouped.Sport.nunique()
+
+# Sort the values of Nsports in descending order
+Nsports = Nsports.sort_values(ascending=False)
+
+# Print the top 15 rows of Nsports
+print(Nsports.head(15))
+
