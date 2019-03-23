@@ -117,3 +117,56 @@ most_medals = cold_war_usa_urs_medals.idxmax(axis='columns')
 
 # Print most_medals.value_counts()
 print(most_medals.value_counts())
+
+
+
+### USA Medal counts by Edition
+
+# Create the DataFrame: usa
+usa = medals[medals.NOC == 'USA']
+
+# Group usa by ['Edition', 'Medal'] and aggregate over 'Athlete'
+usa_medals_by_year = usa.groupby(['Edition', 'Medal'])['Athlete'].count()
+
+# Reshape usa_medals_by_year by unstacking
+usa_medals_by_year = usa_medals_by_year.unstack(level='Medal')
+
+# Plot the DataFrame usa_medals_by_year
+usa_medals_by_year.plot()
+plt.show()
+
+
+### USA Medal Counts by Edition: Area Plot
+
+# Create the DataFrame: usa
+usa = medals[medals.NOC == 'USA']
+
+# Group usa by 'Edition', 'Medal', and 'Athlete'
+usa_medals_by_year = usa.groupby(['Edition', 'Medal'])['Athlete'].count()
+
+# Reshape usa_medals_by_year by unstacking
+usa_medals_by_year = usa_medals_by_year.unstack(level='Medal')
+
+# Create an area plot of usa_medals_by_year
+usa_medals_by_year.plot.area()
+plt.show()
+
+
+
+### USA Medal Counts by Edition: Area Plot with Ordered Medals
+
+# Redefine 'Medal' as an ordered categorical
+medals.Medal = pd.Categorical(values=medals.Medal,categories=['Bronze','Silver','Gold'],ordered=True)
+
+# Create the DataFrame: usa
+usa = medals[medals.NOC == 'USA']
+
+# Group usa by 'Edition', 'Medal', and 'Athlete'
+usa_medals_by_year = usa.groupby(['Edition', 'Medal'])['Athlete'].count()
+
+# Reshape usa_medals_by_year by unstacking
+usa_medals_by_year = usa_medals_by_year.unstack(level='Medal')
+
+# Create an area plot of usa_medals_by_year
+usa_medals_by_year.plot.area()
+plt.show()
