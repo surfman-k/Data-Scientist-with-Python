@@ -112,3 +112,83 @@ data.plot(title='Performance Comparison', subplots=True)
 plt.show()
 
 
+###########################################
+## Getting stock prices using DataReader ## 
+###########################################
+
+# Select companies in Consumer Services
+consumer_services = listings[listings.Sector == 'Consumer Services']
+
+# Sort consumer_services by market cap
+consumer_services2 = consumer_services.sort_values('Market Capitalization', ascending=False)
+
+# Display first 5 rows of designated columns
+print(consumer_services2[['Company Name', 'Exchange', 'Market Capitalization']].head())
+
+
+
+# Set the index of listings to Stock Symbol
+listings_ss = listings.set_index('Stock Symbol')
+
+# Get ticker of the largest Consumer Services company
+ticker = listings_ss.loc[listings_ss.Sector == 'Consumer Services', 'Market Capitalization'].idxmax()
+
+# Set the start date
+start = date(2015, 1, 1)
+
+# Import the stock data
+data = DataReader(ticker, 'iex', start)
+
+# Plot close and volume
+data[['close', 'volume']].plot(secondary_y='volume', title=ticker)
+
+# Show the plot
+plt.show()
+
+
+# Set Stock Symbol as the index
+listings = listings.set_index('Stock Symbol')
+
+# Get ticker of the largest consumer services company listed after 1997
+ticker = listings.loc[(listings.Sector == 'Consumer Services') & (listings['IPO Year'] > 1998), 'Market Capitalization'].idxmax()
+
+
+# Set the start date
+start = date(2015, 1, 1)
+
+# Import the stock data
+data = DataReader(ticker, 'iex', start)
+
+# Plot close and volume
+data[['close', 'volume']].plot(secondary_y='volume', title=ticker)
+
+# Show the plot
+plt.show()
+
+# Set Stock Symbol as the index
+listings_ss = listings.set_index('Stock Symbol')
+
+# Get ticker of 3 largest finance companies
+top_3_companies = listings_ss.loc[listings_ss.Sector == 'Finance', 'Market Capitalization'].nlargest(n=3)
+
+# Convert index to list
+top_3_tickers = top_3_companies.index.tolist()
+
+# Set start date
+start = date(2015, 1, 1)
+
+# Import stock data
+result = DataReader(top_3_tickers, 'iex', start)
+data = pd.DataFrame()
+for ticker in result.columns.levels[1]:
+    index = pd.MultiIndex.from_arrays([
+            [ticker] * len(result),
+            result.index.values
+            ], names=['ticker', 'date'])
+    ticker_df = pd.DataFrame(index=index)
+    for col in result.columns.levels[0]:
+        ticker_df[col] = result[col][ticker].values
+    data = pd.concat([data, ticker_df])
+
+# Unstack and inspect result
+data['close'].unstack().info()
