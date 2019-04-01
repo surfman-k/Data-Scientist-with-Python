@@ -32,6 +32,8 @@ income['Income per Capita (,000)'].mode()
 ## Quantiles: Dispersion ## 
 ###########################
 
+### Finding quantiles without using function
+
 # Calculate mean
 mean = income['Income per Capita'].mean()
 
@@ -41,6 +43,8 @@ std = income['Income per Capita'].std()
 # Calculate and print lower and upper bounds
 bounds = [mean - std, mean + std]
 print(bounds)
+
+### Using Quantile function
 
 # Calculate and print first and third quartiles
 quantiles = income['Income per Capita'].quantile([.25, .75])
