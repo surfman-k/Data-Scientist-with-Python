@@ -77,3 +77,25 @@ plt.tight_layout()
 
 # Show the plot
 plt.show()
+
+
+### Using seaborn
+
+# Import seaborn and matplotlib
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Print the summary statistics for income
+print(income.describe())
+
+# Plot a basic histogram of income per capita
+sns.distplot(income['Income per Capita'])
+
+# Show the plot
+plt.show()
+
+# Plot a rugplot
+sns.distplot(income['Income per Capita'], bins=50, kde=False, rug=True)
+
+# Show the plot
+plt.show()
