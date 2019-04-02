@@ -49,3 +49,27 @@ print(quantiles)
 # Calculate and print IQR
 iqr = quantiles[.75] - quantiles[.25]
 print(iqr)
+
+
+### Deciles of the global income distribution
+
+# Generate range of deciles
+quantiles = np.arange(.1, .91, .1)
+
+# Print them
+print(quantiles)
+
+# Calculate deciles for 'Income per Capita'
+deciles = income['Income per Capita'].quantile(quantiles)
+
+# Print them
+print(deciles)
+
+# Plot deciles as a bar chart
+deciles.plot(kind='bar', title='Global Income per Capita - Deciles')
+
+# Make sure to use the tight layout!
+plt.tight_layout()
+
+# Show the plot
+plt.show()
