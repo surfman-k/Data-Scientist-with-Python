@@ -99,3 +99,17 @@ sns.distplot(income['Income per Capita'], bins=50, kde=False, rug=True)
 
 # Show the plot
 plt.show()
+
+
+# Load the file into growth
+growth = pd.read_csv('income_growth.csv', parse_dates=['DATE']).set_index('DATE')
+
+# Inspect the summary statistics for the growth rates
+growth.describe()
+
+# Iterate over the three columns
+for column in growth.columns:
+    sns.distplot(growth[column], hist=False, label=column)
+    
+# Show the plot
+plt.show()
