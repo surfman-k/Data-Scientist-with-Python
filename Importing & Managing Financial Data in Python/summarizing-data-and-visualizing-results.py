@@ -113,3 +113,25 @@ for column in growth.columns:
     
 # Show the plot
 plt.show()
+
+
+
+### Highlighting values in the distribution
+
+# Create inc_per_capita
+inc_per_capita = income['Income per Capita']
+
+# Filter out incomes above the 95th percentile
+inc_per_capita = inc_per_capita[inc_per_capita < inc_per_capita.quantile(0.95)]
+
+# Plot histogram and assign to ax
+ax = sns.distplot(inc_per_capita, hist=True)
+
+# Highlight mean
+ax.axvline(inc_per_capita.mean(), color='b')
+
+# Highlight median
+ax.axvline(inc_per_capita.median(), color='g')
+
+# Show the plot
+plt.show()
