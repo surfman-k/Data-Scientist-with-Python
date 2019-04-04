@@ -135,3 +135,19 @@ ax.axvline(inc_per_capita.median(), color='g')
 
 # Show the plot
 plt.show()
+
+
+#######################################
+## Summarizing Categorical Variables ## 
+#######################################
+
+# Create the list exchanges
+exchanges = ['amex', 'nasdaq', 'nyse']
+
+# Iterate over exchanges then plot and show result
+for exchange in exchanges:
+    sectors = listings[exchange].Sector.value_counts()
+    # Sort in descending order and plot
+    sectors.sort_values(ascending=False).plot(kind='bar')
+    # Show the plot
+    plt.show()
