@@ -10,3 +10,7 @@
 
 - Bond Performance vs Stock Performance
 !["Bond Performance vs Stock Performance"](https://github.com/surfman-k/Data-Scientist-with-Python/blob/master/Importing%20&%20Managing%20Financial%20Data%20in%20Python/Compare%20bond%20and%20stock%20performance.png?raw=true)
+
+- Median market capitalization by sector
+!["Median market capitalization by sector"](https://github.com/surfman-k/Data-Scientist-with-Python/blob/master/Importing%20&%20Managing%20Financial%20Data%20in%20Python/Median%20market%20capitalization%20by%20sector.png?raw=true)
+
