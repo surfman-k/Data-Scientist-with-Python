@@ -81,3 +81,29 @@ summary = summary.unstack()
 
 # Print the summary again
 print(summary)
+
+
+#############################################
+## More ways to aggregate data by category ## 
+#############################################
+
+# Group listings by Sector and Exchange
+by_sector_exchange = listings.groupby(['Sector', 'Exchange'])
+
+# Calculate the median market cap
+mcap_by_sector_exchange = by_sector_exchange.market_cap_m.median()
+
+# Display the head of the result
+print(mcap_by_sector_exchange.head())
+
+# Unstack mcap_by_sector_exchange
+mcap_unstacked = mcap_by_sector_exchange.unstack()
+
+# Plot as a bar chart
+mcap_unstacked.plot(kind='bar', title='Median Market Capitalization by Exchange')
+
+# Set the x label
+plt.xlabel('USD mn')
+
+# Show the plot
+plt.show()
