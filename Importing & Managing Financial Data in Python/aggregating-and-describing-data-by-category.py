@@ -107,3 +107,21 @@ plt.xlabel('USD mn')
 
 # Show the plot
 plt.show()
+
+
+### several metrics by sector and exchange
+
+# Create market_cap_m
+listings['market_cap_m'] = listings['Market Capitalization'].div(1e6)
+
+# Group listing by both Sector and Exchange
+by_sector_exchange = listings.groupby(['Sector', 'Exchange'])
+
+# Subset market_cap_m of by_sector_exchange
+bse_mcm = by_sector_exchange['market_cap_m']
+
+# Calculate mean, median, and std in summary
+summary = bse_mcm.agg({'Average': 'mean', 'Median': 'median', 'Standard Deviation': 'std'})
+
+# Print the summary
+print(summary)
