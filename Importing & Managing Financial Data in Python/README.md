@@ -14,3 +14,6 @@
 - Median market capitalization by sector
 !["Median market capitalization by sector"](https://github.com/surfman-k/Data-Scientist-with-Python/blob/master/Importing%20&%20Managing%20Financial%20Data%20in%20Python/Median%20market%20capitalization%20by%20sector.png?raw=true)
 
+
+- Global median per capita income over time
+!["Global median per capita income over time"](https://github.com/surfman-k/Data-Scientist-with-Python/blob/master/Importing%20&%20Managing%20Financial%20Data%20in%20Python/global-median-per-capita-income-over-time.png?raw=true)
