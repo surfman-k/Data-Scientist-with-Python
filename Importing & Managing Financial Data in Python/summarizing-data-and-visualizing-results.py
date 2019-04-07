@@ -184,3 +184,30 @@ plt.xticks(rotation=45)
 
 # Show the plot
 plt.show()
+
+
+### metrics by sector and IPO year
+
+# Import the seaborn library as sns
+import seaborn as sns
+
+# Exclude IPOs before 2000 and from the 'amex'
+listings = listings[(listings['IPO Year'] > 2000) & (listings.Exchange != 'amex')]
+
+# Convert IPO Year to integer
+listings['IPO Year'] = listings['IPO Year'].astype(int)
+
+# Create market_cap_m
+listings['market_cap_m'] = listings['Market Capitalization'].div(1e6)
+
+# Exclude outliers
+listings = listings[listings.market_cap_m < listings.market_cap_m.quantile(.95)]
+
+# Create the pointplot
+sns.pointplot(x='IPO Year', y='market_cap_m', hue='Exchange', data=listings)
+
+# Rotate xticks
+plt.xticks(rotation=45)
+
+# Show the plot
+plt.show()
