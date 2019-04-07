@@ -125,3 +125,23 @@ summary = bse_mcm.agg({'Average': 'mean', 'Median': 'median', 'Standard Deviatio
 
 # Print the summary
 print(summary)
+
+
+######################################
+## Summary Statistics using Seaborn ## 
+######################################
+
+# Select IPOs after 2000
+listings = listings[listings['IPO Year'] > 2000]
+
+# Convert IPO Year to integer
+listings['IPO Year'] = listings['IPO Year'].astype(int)
+
+# Create a countplot
+sns.countplot(x='IPO Year', hue='Exchange', data=listings)
+
+# Rotate xticks and show result
+plt.xticks(rotation=45)
+
+# Show the plot
+plt.show()
