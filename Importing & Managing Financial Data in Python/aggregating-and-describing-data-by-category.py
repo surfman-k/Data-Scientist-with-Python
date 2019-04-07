@@ -145,3 +145,30 @@ plt.xticks(rotation=45)
 
 # Show the plot
 plt.show()
+
+
+### Global median per capita income over time
+
+# Inspect the data
+income_trend.info()
+
+# Create barplot
+sns.barplot(x='Year', y='Income per Capita', data=income_trend)
+
+# Rotate xticks
+plt.xticks(rotation=45)
+
+# Show the plot
+plt.show()
+
+# Close the plot
+plt.close()
+
+# Create second barplot
+sns.barplot(x='Year', y='Income per Capita', data=income_trend, estimator=np.median)
+
+# Rotate xticks
+plt.xticks(rotation=45)
+
+# Show the plot
+plt.show()
