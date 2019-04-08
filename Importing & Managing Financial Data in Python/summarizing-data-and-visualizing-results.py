@@ -211,3 +211,21 @@ plt.xticks(rotation=45)
 
 # Show the plot
 plt.show()
+
+
+##########################################
+## Distributions by Category in Seaborn ## 
+##########################################
+
+# Inspect the inflation data
+inflation.info()
+
+# Create inflation_by_country
+inflation_by_country = inflation.groupby('Country')
+
+# Iterate over inflation_by_country and plot the inflation time series per country
+for country, data in inflation_by_country:
+    # Plot the data
+    data.plot(title=country)
+    # Show the plot
+    plt.show()
