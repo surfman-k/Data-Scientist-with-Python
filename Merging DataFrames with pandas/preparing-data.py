@@ -55,3 +55,7 @@ medals['Bronze'] = bronze['Total']
 
 # Print the head of medals
 print(medals.head())
+
+#####################
+## Reindexing Data ## 
+#####################
