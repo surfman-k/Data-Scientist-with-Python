@@ -229,3 +229,21 @@ for country, data in inflation_by_country:
     data.plot(title=country)
     # Show the plot
     plt.show()
+
+
+### Distribution of Inflation Rates
+
+# Create boxplot
+sns.boxplot(x='Country', y='Inflation', data=inflation)
+
+# Show the plot
+plt.show()
+
+# Close the plot
+plt.close()
+
+# Create swarmplot
+sns.swarmplot(x='Country', y='Inflation', data=inflation)
+
+# Show the plot
+plt.show()
