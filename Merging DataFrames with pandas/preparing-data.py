@@ -90,6 +90,7 @@ weather4 = weather1.sort_values('Max TemperatureF')
 print(weather4.head())
 
 
+
 ### Reindexing DataFrame from list
 
 # Import pandas
