@@ -53,3 +53,8 @@ quarter1 = pd.concat(units, axis='rows')
 # Print slices from quarter1
 print(quarter1.loc['jan 27, 2015':'feb 2, 2015'])
 print(quarter1.loc['feb 26, 2015':'mar 7, 2015'])
+
+
+##########################################
+## Appending & concatenating DataFrames ## 
+##########################################
