@@ -76,3 +76,11 @@ print(combined_names.shape)
 # Print all rows that contain the name 'Morgan'
 print(combined_names.loc[combined_names['name']=='Morgan'])
 
+
+### Concatenating pandas DataFrames along column axis
+
+# Concatenate weather_max and weather_mean horizontally: weather
+weather = pd.concat([weather_max, weather_mean], axis=1)
+
+# Print weather
+print(weather)
