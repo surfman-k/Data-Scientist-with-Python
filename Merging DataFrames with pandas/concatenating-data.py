@@ -209,3 +209,18 @@ print(sales)
 # Print all sales by Mediacore
 idx = pd.IndexSlice
 print(sales.loc[idx[:, 'Mediacore'], :])
+
+#########################
+## Outer & inner joins ## 
+#########################
+
+### Concatenating DataFrames with inner join
+
+# Create the list of DataFrames: medal_list
+medal_list = [bronze, silver, gold]
+
+# Concatenate medal_list horizontally using an inner join: medals
+medals = pd.concat(medal_list, keys=['bronze', 'silver', 'gold'], axis=1, join='inner')
+
+# Print medals
+print(medals)
