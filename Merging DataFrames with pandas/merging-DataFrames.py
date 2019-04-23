@@ -2,6 +2,8 @@
 ## Merging DataFrames ## 
 ########################
 
+### Merging by column
+
 # Merge revenue with managers on 'city': merge_by_city
 merge_by_city = pd.merge(revenue, managers, on='city')
 
