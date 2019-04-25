@@ -79,3 +79,8 @@ merge_outer_on = pd.merge(sales_and_managers, revenue_and_sales, on=['city','sta
 
 # Print merge_outer_on
 print(merge_outer_on)
+
+
+####################
+## Ordered merges ## 
+####################
