@@ -154,3 +154,21 @@ hosts = hosts.reset_index()
 
 # Print hosts
 print(hosts)
+
+
+### Reshaping for analysis
+
+# Import pandas
+import pandas as pd
+
+# Reshape fractions_change: reshaped
+reshaped = pd.melt(fractions_change, id_vars='Edition', value_name='Change')
+
+# Print reshaped.shape and fractions_change.shape
+print(reshaped.shape, fractions_change.shape)
+
+# Extract rows from reshaped where 'NOC' == 'CHN': chn
+chn = reshaped.loc[reshaped.NOC == 'CHN']
+
+# Print last 5 rows of chn
+print(chn.tail())
