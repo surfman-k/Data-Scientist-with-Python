@@ -132,6 +132,8 @@ print(fractions_change.tail())
 ## Reshaping and plotting ##
 ############################
 
+### Building hosts DataFrame
+
 # Import pandas
 import pandas as pd
 
