@@ -17,3 +17,12 @@ FROM films;
 
 SELECT *
 FROM films;
+
+/* SELECT DISTINCT */
+
+SELECT DISTINCT country
+FROM films;
+SELECT DISTINCT certification
+FROM films;
+SELECT DISTINCT role
+FROM roles;
