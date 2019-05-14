@@ -7,6 +7,7 @@ AS result;
 SELECT 'SQL is cool!'
 AS result;
 
+/* TYPICAL SELECTS */
 
 Select title from films;
 Select release_year from films;
