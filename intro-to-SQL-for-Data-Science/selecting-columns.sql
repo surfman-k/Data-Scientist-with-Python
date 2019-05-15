@@ -1,4 +1,4 @@
-/* Tables */
+/* TABLES */
 
 SELECT 'DataCamp <3 SQL'
 AS result;
@@ -7,6 +7,7 @@ AS result;
 SELECT 'SQL is cool!'
 AS result;
 
+/* TYPICAL SELECTS */
 
 Select title from films;
 Select release_year from films;
@@ -27,7 +28,7 @@ FROM films;
 SELECT DISTINCT role
 FROM roles;
 
-/* Counts */
+/* COUNTS */
 
 SELECT COUNT(*)
 FROM people;
