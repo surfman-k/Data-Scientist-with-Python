@@ -26,3 +26,8 @@ SELECT DISTINCT certification
 FROM films;
 SELECT DISTINCT role
 FROM roles;
+
+/* Counts */
+
+SELECT COUNT(*)
+FROM people;
