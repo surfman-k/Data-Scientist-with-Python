@@ -32,3 +32,12 @@ FROM roles;
 
 SELECT COUNT(*)
 FROM people;
+
+SELECT COUNT(DISTINCT language)
+FROM films;
+
+/* WHERE */
+
+SELECT *
+FROM films
+WHERE release_year = 2016;
