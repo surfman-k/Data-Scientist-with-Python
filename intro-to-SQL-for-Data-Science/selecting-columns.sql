@@ -41,3 +41,17 @@ FROM films;
 SELECT *
 FROM films
 WHERE release_year = 2016;
+
+/* Filtering */
+
+SELECT *
+FROM films
+WHERE release_year = 2016;
+
+SELECT COUNT(*)
+FROM films
+WHERE release_year < 2000;
+
+SELECT title, release_year
+FROM films
+WHERE release_year > 2000;
