@@ -42,11 +42,7 @@ SELECT *
 FROM films
 WHERE release_year = 2016;
 
-/* Filtering */
-
-SELECT *
-FROM films
-WHERE release_year = 2016;
+/* FILTERING */
 
 SELECT COUNT(*)
 FROM films
